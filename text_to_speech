@@ -1,0 +1,10 @@
+import os,re
+
+input_file = open("test.txt", "r")
+line = input_file.readlines()
+input_file.close()
+
+for i in line:
+    b = i.rstrip()
+    rep = re.sub('\s','', b)
+    os.system("espeak %s" %rep)
